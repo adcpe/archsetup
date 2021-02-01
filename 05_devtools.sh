@@ -3,7 +3,6 @@
 echo -e "\nInstalling devtools\n"
 
 PKGS=(
-  'code'
   'postgresql'
   'redis'
   'nodejs'
@@ -11,9 +10,18 @@ PKGS=(
   'python'
 )
 
+AURPKGS=(
+  'visual-studio-code-bin'
+)
+
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed
+done
+
+for AURPKG in "${AURPKGS[@]}"; do
+    echo "INSTALLING: ${AURPKG}"
+    yay -S "$AURPKG" --noconfirm --needed
 done
 
 # install asdf - version manager for different languages
