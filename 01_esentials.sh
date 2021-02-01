@@ -9,6 +9,7 @@ PKGS=(
   'htop'                    # task manager
   'neofetch'                # system info
   'systemd-swap'            # swap
+  'openssh'                 # ssh
 
   # file system and partition tools
   'exfat-utils'
