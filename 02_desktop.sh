@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo -e "\nInstalling Desktop Environment\n"
 
 PKGS=(

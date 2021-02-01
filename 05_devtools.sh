@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo -e "\nInstalling devtools\n"
 
 PKGS=(

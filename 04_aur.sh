@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo -e "\nInstalling AUR packages\n"
 
 git clone https://aur.archlinux.org/yay.git ~/yay
