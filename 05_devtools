@@ -8,6 +8,7 @@ PKGS=(
   'nodejs'
   'ruby'
   'python'
+  'php'
 )
 
 AURPKGS=(
@@ -36,9 +37,5 @@ asdf plugin add python
 asdf plugin add ruby
 asdf plugin add rust
 asdf install
-
-# copying completions for fish
-mkdir -p ~/.config/fish/completions
-cp ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
 echo -e "\nDone!\n"

@@ -19,7 +19,7 @@ PKGS=(
   'kcolorchooser'          # color chooser
   'ktorrent'               # torrents
   'redshift'               # screen color temperature adjuster
-  'celluloid'              # video player
+  'kaffeine'              # video player
   'cantata'                # music player
   'ktimer'
   'kfind'
