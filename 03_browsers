@@ -5,11 +5,12 @@ echo -e "\nInstalling Browsers\n"
 PKGS=(
   'min'
   'firefox'
+  'vivaldi'
+  'vivaldi-ffmpeg-codecs'
 )
 
 for PKG in "${PKGS[@]}"; do
-    echo "INSTALLING: ${PKG}"
-    sudo pacman -S "$PKG" --noconfirm --needed
+  sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 echo -e "\nDone!\n"

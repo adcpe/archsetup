@@ -16,13 +16,11 @@ AURPKGS=(
 )
 
 for PKG in "${PKGS[@]}"; do
-    echo "INSTALLING: ${PKG}"
-    sudo pacman -S "$PKG" --noconfirm --needed
+  sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 for AURPKG in "${AURPKGS[@]}"; do
-    echo "INSTALLING: ${AURPKG}"
-    yay -S "$AURPKG" --noconfirm --needed
+  yay -S "$AURPKG" --noconfirm --needed
 done
 
 # install asdf - version manager for different languages

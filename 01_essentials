@@ -10,6 +10,7 @@ PKGS=(
   'neofetch'                # system info
   'systemd-swap'            # swap
   'openssh'                 # ssh
+  'xclip'
   'xdg-user-dirs'
 
   # file system and partition tools
@@ -25,15 +26,18 @@ TOOLS=(
   'p7zip'
   'unarchiver'
   'unrar'
+  'unzip'
+  
+  # php requirements
+  're2c'
+  'gd'
 )
 
 for PKG in "${PKGS[@]}"; do
-    echo "INSTALLING: ${PKG}"
-    sudo pacman -S "$PKG" --noconfirm --needed
+  sudo pacman -S "$PKG" --noconfirm --needed
 done
 for TOOL in "${TOOLS[@]}"; do
-    echo "INSTALLING: ${TOOL}"
-    sudo pacman -S "$TOOL" --noconfirm --needed --asdeps
+  sudo pacman -S "$TOOL" --noconfirm --needed --asdeps
 done
 
 xdg-user-dirs-update

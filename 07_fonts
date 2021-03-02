@@ -38,13 +38,11 @@ AURPKGS=(
 sudo pacman -S ttf-font --needed
 
 for PKG in "${PKGS[@]}"; do
-    echo "INSTALLING: ${PKG}"
-    sudo pacman -S "$PKG" --noconfirm --needed
+  sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 for AURPKG in "${AURPKGS[@]}"; do
-    echo "INSTALLING: ${AURPKG}"
-    sudo pacman -S "$AURPKG" --noconfirm --needed
+  yay -S "$AURPKG" --noconfirm --needed
 done
 
 echo -e "\nDone!\n"
