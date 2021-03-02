@@ -9,12 +9,7 @@ makepkg -si
 PKGS=(
   'slack-desktop'
   'insomnia'
-  'heroku-cli'
-  'exercism-bin'
-  'etcher-bin'
-  'zoom'
   'skypeforlinux-stable-bin'
-  'onedrive-abraunegg'
 )
 
 for PKG in "${PKGS[@]}"; do

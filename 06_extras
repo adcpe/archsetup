@@ -7,6 +7,14 @@ PKGS=(
   'discord'
 )
 
+AURPKGS=(
+  'heroku-cli'
+  'exercism-bin'
+  'etcher-bin'
+  'zoom'
+  'onedrive-abraunegg'
+)
+
 for PKG in "${PKGS[@]}"; do
   sudo pacman -S "$PKG" --noconfirm --needed
 done
