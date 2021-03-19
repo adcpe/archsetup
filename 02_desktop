@@ -26,11 +26,11 @@ PKGS=(
   'kdialog'
 
   # bluetooth
-  bluez
-  bluez-utils
-  bluedevil
-  pulseaudio-alsa
-  pulseaudio-bluetooth
+  'bluez'
+  'bluez-utils'
+  'bluedevil'
+  'pulseaudio-alsa'
+  'pulseaudio-bluetooth'
 
   # office suite
   'libreoffice-fresh'
