@@ -25,6 +25,13 @@ PKGS=(
   'kfind'
   'kdialog'
 
+  # bluetooth
+  bluez
+  bluez-utils
+  bluedevil
+  pulseaudio-alsa
+  pulseaudio-bluetooth
+
   # office suite
   'libreoffice-fresh'
   'hunspell-en_US'
@@ -47,5 +54,6 @@ done
 
 sudo systemctl enable sddm.service
 sudo systemctl enable NetworkManager
+sudo systemctl enable bluetooth.service
 
 echo -e "\nDone!\n"
