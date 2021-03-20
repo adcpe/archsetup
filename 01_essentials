@@ -29,6 +29,12 @@ TOOLS=(
   'unzip'
   
   # php requirements
+  'base'
+  'base-devel'
+  'icu'
+  'postgresql-libs'
+  'zlib'
+  'oniguruma'
   're2c'
   'gd'
 )
@@ -36,6 +42,7 @@ TOOLS=(
 for PKG in "${PKGS[@]}"; do
   sudo pacman -S "$PKG" --noconfirm --needed
 done
+
 for TOOL in "${TOOLS[@]}"; do
   sudo pacman -S "$TOOL" --noconfirm --needed --asdeps
 done
