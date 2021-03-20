@@ -4,23 +4,13 @@ echo -e "\nInstalling devtools\n"
 
 PKGS=(
   'postgresql'
-  'redis'
-  'nodejs'
-  'ruby'
-  'python'
-  'php'
+  'mariadb'
+  'mysql-workbench'
+  'dbeaver'
 )
 
 AURPKGS=(
   'visual-studio-code-bin'
-)
-
-PLUGINS=(
-  'nodejs'
-  'php'
-  'python'
-  'ruby'
-  'rust'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -30,17 +20,5 @@ done
 for AURPKG in "${AURPKGS[@]}"; do
   yay -S "$AURPKG" --noconfirm --needed
 done
-
-# install asdf - version manager for different languages
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
-
-# import the Node.js release team's OpenPGP keys to main keyring
-bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
-
-for PLUGIN in "${PLUGINS[@]}"; do
-  asdf plugin add "$AURPKG"
-done
-
-asdf install
 
 echo -e "\nDone!\n"
