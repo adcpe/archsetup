@@ -19,6 +19,10 @@ for PKG in "${PKGS[@]}"; do
   sudo pacman -S "$PKG" --noconfirm --needed
 done
 
+for AURPKG in "${AURPKGS[@]}"; do
+  yay -S "$AURPKG" --noconfirm --needed
+done
+
 npm i -g trash-cli
 
 echo -e "\nDone!\n"
