@@ -4,7 +4,7 @@ echo -e "\nInstalling Desktop Environment\n"
 
 PKGS=(
   'sddm'                    # window manager
-  'sddm-kcm'                # wm config tool
+  'sddm-kcm'                # window manager config tool
   'plasma'                  # desktop environment
   'kde-system'              # desktop environment
 
@@ -24,6 +24,12 @@ PKGS=(
   'ktimer'
   'kfind'
   'kdialog'
+  'openvpn'
+  'networkmanager-openvpn'
+  'kwallet-pam'
+  'kwalletmanager'
+  'gnome-keyring'
+  'libsecret'
 
   # bluetooth
   'bluez'
@@ -55,5 +61,7 @@ done
 sudo systemctl enable sddm.service
 sudo systemctl enable NetworkManager
 sudo systemctl enable bluetooth.service
+
+curl -fsSL https://starship.rs/install.sh | bash
 
 echo -e "\nDone!\n"
