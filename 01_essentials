@@ -12,6 +12,7 @@ PKGS=(
   'openssh'                 # ssh
   'xclip'
   'xdg-user-dirs'
+  'ttf-font'
 
   # file system and partition tools
   'exfat-utils'

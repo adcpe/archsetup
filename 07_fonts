@@ -35,8 +35,6 @@ AURPKGS=(
   'ttf-ms-fonts'
 )
 
-sudo pacman -S ttf-font --needed
-
 for PKG in "${PKGS[@]}"; do
   sudo pacman -S "$PKG" --noconfirm --needed
 done
