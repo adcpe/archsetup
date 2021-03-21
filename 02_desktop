@@ -3,10 +3,7 @@
 echo -e "\nInstalling Desktop Environment\n"
 
 PKGS=(
-  'sddm'                    # window manager
-  'sddm-kcm'                # window manager config tool
   'plasma'                  # desktop environment
-  'kde-system'              # desktop environment
 
   # Desktop environment base programs
   'dolphin'                 # file explorer
@@ -21,6 +18,9 @@ PKGS=(
   'redshift'                # screen color temperature adjuster
   'vlc'                     # video player
   'cantata'                 # music player
+  'kcron'
+  'khelpcenter'
+  'ksystemlog'
   'ktimer'
   'kfind'
   'kdialog'
@@ -34,7 +34,6 @@ PKGS=(
   # bluetooth
   'bluez'
   'bluez-utils'
-  'bluedevil'
   'pulseaudio-alsa'
   'pulseaudio-bluetooth'
 
