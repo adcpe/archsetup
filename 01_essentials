@@ -12,7 +12,6 @@ PKGS=(
   'openssh'                 # ssh
   'xclip'
   'xdg-user-dirs'
-  'ttf-font'
 
   # file system and partition tools
   'exfat-utils'
@@ -38,6 +37,7 @@ TOOLS=(
   'oniguruma'
   're2c'
   'gd'
+  'libzip'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -48,7 +48,12 @@ for TOOL in "${TOOLS[@]}"; do
   sudo pacman -S "$TOOL" --noconfirm --needed --asdeps
 done
 
+git clone https://aur.archlinux.org/yay.git ~/yay
+cd ~/yay
+makepkg -si
+
+sudo pacman -S ttf-font
 xdg-user-dirs-update
 sudo systemctl enable systemd-swap
 
-echo -e "\nDone!\n"
+echo -e "\nDONE!\n"

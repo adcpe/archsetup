@@ -3,7 +3,6 @@
 echo -e "\nInstalling Browsers\n"
 
 PKGS=(
-  'min'
   'firefox'
   'vivaldi'
   'vivaldi-ffmpeg-codecs'

@@ -8,11 +8,9 @@ PKGS=(
 )
 
 AURPKGS=(
-  'heroku-cli'
-  'exercism-bin'
+  'onedrive-abraunegg'
   'etcher-bin'
   'zoom'
-  'onedrive-abraunegg'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -20,7 +18,7 @@ for PKG in "${PKGS[@]}"; do
 done
 
 for AURPKG in "${AURPKGS[@]}"; do
-  yay -S "$AURPKG" --noconfirm --needed
+  yay -Sua "$AURPKG" --noconfirm --needed
 done
 
-echo -e "\nDone!\n"
+echo -e "\nDONE!\n"

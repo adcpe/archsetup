@@ -2,10 +2,6 @@
 
 echo -e "\nInstalling AUR packages\n"
 
-git clone https://aur.archlinux.org/yay.git ~/yay
-cd ~/yay
-makepkg -si
-
 PKGS=(
   'slack-desktop'
   'insomnia'
@@ -13,7 +9,7 @@ PKGS=(
 )
 
 for PKG in "${PKGS[@]}"; do
-  yay -S "$PKG" --noconfirm --needed
+  yay -Sua "$PKG" --noconfirm --needed
 done
 
-echo -e "\nDone!\n"
+echo -e "\nDONE!\n"

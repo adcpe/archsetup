@@ -58,9 +58,8 @@ for DEP in "${DEPS[@]}"; do
 done
 
 sudo systemctl enable sddm.service
-sudo systemctl enable NetworkManager
 sudo systemctl enable bluetooth.service
 
 curl -fsSL https://starship.rs/install.sh | bash
 
-echo -e "\nDone!\n"
+echo -e "\nDONE!\n"

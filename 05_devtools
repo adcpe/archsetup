@@ -18,9 +18,7 @@ for PKG in "${PKGS[@]}"; do
 done
 
 for AURPKG in "${AURPKGS[@]}"; do
-  yay -S "$AURPKG" --noconfirm --needed
+  yay -Sua "$AURPKG" --noconfirm --needed
 done
 
-sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-
-echo -e "\nDone!\n"
+echo -e "\nDONE!\n"
