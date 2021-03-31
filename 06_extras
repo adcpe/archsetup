@@ -9,7 +9,7 @@ PKGS=(
 
 AURPKGS=(
   'onedrive-abraunegg'
-  'etcher-bin'
+  'slack-desktop'
   'zoom'
 )
 
