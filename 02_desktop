@@ -37,6 +37,11 @@ PKGS=(
   'pulseaudio-alsa'
   'pulseaudio-bluetooth'
 
+  # browsers
+  'firefox'
+  'vivaldi'
+  'vivaldi-ffmpeg-codecs'
+
   # office suite
   'libreoffice-fresh'
   'hunspell-en_US'
