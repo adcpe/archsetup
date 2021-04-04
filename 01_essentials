@@ -20,6 +20,8 @@ PKGS=(
 )
 
 TOOLS=(
+  'git'
+
   # archiving tools
   'lrzip'
   'lrzop'
