@@ -10,6 +10,7 @@ PKGS=(
   'neofetch'                # system info
   'systemd-swap'            # swap
   'openssh'                 # ssh
+  'git'
   'xclip'
   'xdg-user-dirs'
 
@@ -20,8 +21,6 @@ PKGS=(
 )
 
 TOOLS=(
-  'git'
-
   # archiving tools
   'lrzip'
   'lrzop'
