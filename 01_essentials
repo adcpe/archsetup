@@ -8,7 +8,6 @@ PKGS=(
   'bat'                     # cat
   'htop'                    # task manager
   'neofetch'                # system info
-  'systemd-swap'            # swap
   'openssh'                 # ssh
   'xclip'
   'xdg-user-dirs'
@@ -54,6 +53,5 @@ makepkg -si
 
 sudo pacman -S ttf-font
 xdg-user-dirs-update
-sudo systemctl enable systemd-swap
 
 echo -e "\nDONE!\n"
