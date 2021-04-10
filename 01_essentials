@@ -9,6 +9,7 @@ PKGS=(
   'htop'                    # task manager
   'neofetch'                # system info
   'openssh'                 # ssh
+  'git'
   'xclip'
   'xdg-user-dirs'
 
