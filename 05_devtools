@@ -5,7 +5,6 @@ echo -e "\nInstalling devtools\n"
 PKGS=(
   'postgresql'
   'mariadb'
-  'mysql-workbench'
   'dbeaver'
 )
 
