@@ -55,4 +55,6 @@ makepkg -si
 sudo pacman -S ttf-font
 xdg-user-dirs-update
 
+curl -Lk https://gitlab.com/andres-dc/dots/-/raw/main/.restore | /bin/bash
+
 echo -e "\nDONE!\n"
