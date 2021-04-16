@@ -46,7 +46,6 @@ kwriteconfig5 --file $HOME/.config/kdeglobals --group KDE --key SingleClick "fal
 # set keyboard layout
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key DisplayNames ""
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key LayoutList "us"
-kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key LayoutLoopCount "-1"
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key Model "pc86"
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ResetOldOptions "false"
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ShowFlag "false"
