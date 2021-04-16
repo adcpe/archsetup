@@ -14,7 +14,7 @@ PKGS=(
   'kcalc'                   # calculator
   'spectacle'               # screenshots
   'kcolorchooser'           # color chooser
-  'qbittorrent'             # torrents
+  'deluge'                  # torrents
   'redshift'                # screen color temperature adjuster
   'vlc'                     # video player
   'cantata'                 # music player
