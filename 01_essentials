@@ -9,7 +9,7 @@ PKGS=(
   'htop'                    # task manager
   'neofetch'                # system info
   'openssh'                 # ssh
-  'git'
+  'curl'
   'xclip'
   'xdg-user-dirs'
 
@@ -29,7 +29,6 @@ TOOLS=(
   'unzip'
   
   # php requirements
-  'base'
   'base-devel'
   'icu'
   'postgresql-libs'
@@ -38,6 +37,7 @@ TOOLS=(
   're2c'
   'gd'
   'libzip'
+  'imagemagick'
 )
 
 for PKG in "${PKGS[@]}"; do
