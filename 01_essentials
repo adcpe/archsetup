@@ -12,6 +12,7 @@ PKGS=(
   'curl'
   'xclip'
   'xdg-user-dirs'
+  'base-devel'
 
   # file system and partition tools
   'exfat-utils'
@@ -29,7 +30,6 @@ TOOLS=(
   'unzip'
   
   # php requirements
-  'base-devel'
   'icu'
   'postgresql-libs'
   'zlib'

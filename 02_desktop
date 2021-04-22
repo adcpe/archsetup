@@ -14,7 +14,7 @@ PKGS=(
   'kcalc'                   # calculator
   'spectacle'               # screenshots
   'kcolorchooser'           # color chooser
-  'deluge'                  # torrents
+  'qbittorrent'             # torrents
   'redshift'                # screen color temperature adjuster
   'vlc'                     # video player
   'cantata'                 # music player
@@ -54,6 +54,8 @@ PKGS=(
 
 DEPS=(
   'mpd'                     # music player daemon
+  'fwupd'
+  'packagekit-qt5'
 )
 
 for PKG in "${PKGS[@]}"; do
