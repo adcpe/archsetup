@@ -38,6 +38,20 @@ TOOLS=(
   'gd'
   'libzip'
   'imagemagick'
+  'djvulibre'
+  'ghostscript'
+  'imagemagick-doc'
+  'libheif'
+  'libraw'
+  'librsvg'
+  'libwebp'
+  'libwmf'
+  'libxml2'
+  'ocl-icd'
+  'openexr'
+  'openjpeg2'
+  'pango'
+  'libxslt'
 )
 
 for PKG in "${PKGS[@]}"; do
