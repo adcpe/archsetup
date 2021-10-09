@@ -41,6 +41,7 @@ PKGS=(
 
   # browsers
   'firefox'
+  'chromium'
   'vivaldi'
   'vivaldi-ffmpeg-codecs'
 
