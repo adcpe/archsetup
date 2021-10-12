@@ -34,10 +34,10 @@ PKGS=(
   # bluetooth
   'bluez'
   'bluez-utils'
-  'pipewire'
-  'pipewire-alsa'
-  'pipewire-jack'
-  'pipewire-bluetooth'
+  'pulseaudio'
+  'pulseaudio-alsa'
+  'pulseaudio-jack'
+  'pulseaudio-bluetooth'
 
   # browsers
   'firefox'
