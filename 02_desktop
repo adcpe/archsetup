@@ -39,8 +39,10 @@ PKGS=(
   'pipewire-jack'
   'pipewire-pulse'
   'pipewire-bluetooth'
+  'pipewire-media-session'
   'sof-firmware'
   'alsa-ucm-conf'
+  'plasma-pa'
 
   # browsers
   'firefox'
