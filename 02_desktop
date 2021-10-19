@@ -31,13 +31,16 @@ PKGS=(
   'gnome-keyring'
   'libsecret'
 
-  # bluetooth
+  # bluetooth & audio
   'bluez'
   'bluez-utils'
-  'pulseaudio'
-  'pulseaudio-alsa'
-  'pulseaudio-jack'
-  'pulseaudio-bluetooth'
+  'pipewire'
+  'pipewire-alsa'
+  'pipewire-jack'
+  'pipewire-pulse'
+  'pipewire-bluetooth'
+  'sof-firmware'
+  'alsa-ucm-conf'
 
   # browsers
   'firefox'
