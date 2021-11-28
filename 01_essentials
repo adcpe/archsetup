@@ -13,6 +13,7 @@ PKGS=(
   'xclip'
   'xdg-user-dirs'
   'base-devel'
+  'reflector'
 
   # file system and partition tools
   'exfat-utils'
