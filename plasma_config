@@ -45,7 +45,7 @@ kwriteconfig5 --file $HOME/.config/kdeglobals --group KDE --key SingleClick "fal
 
 # set keyboard layout
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key DisplayNames ""
-kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key LayoutList "us"
+kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key LayoutList "us,es"
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key Model "pc86"
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ResetOldOptions "false"
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ShowFlag "false"
@@ -54,4 +54,4 @@ kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ShowLayoutIndicat
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ShowSingle "false"
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key SwitchMode "Global"
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key Use "true"
-kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key VariantList "altgr-intl"
+kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key VariantList "altgr-intl,deadtilde"
