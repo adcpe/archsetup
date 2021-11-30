@@ -42,7 +42,6 @@ PKGS=(
   'pipewire-media-session'
   'sof-firmware'
   'alsa-ucm-conf'
-  'plasma-pa'
 
   # browsers
   'firefox'
