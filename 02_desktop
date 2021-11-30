@@ -34,12 +34,11 @@ PKGS=(
   # bluetooth & audio
   'bluez'
   'bluez-utils'
-  'pipewire'
-  'pipewire-alsa'
-  'pipewire-jack'
-  'pipewire-pulse'
-  'pipewire-bluetooth'
-  'pipewire-media-session'
+  'pulseaudio'
+  'pulseaudio-alsa'
+  'pulseaudio-bluetooth'
+  'pulseaudio-jack'
+  'plasma-pa'
   'sof-firmware'
   'alsa-ucm-conf'
 
