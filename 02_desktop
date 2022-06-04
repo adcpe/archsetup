@@ -55,6 +55,10 @@ PKGS=(
   'hunspell-es_pe'
   'hyphen-en'
   'hyphen-es'
+
+  # other
+  'libappindicator-gtk3'
+  'gnome-shell-extension-appindicator'
 )
 
 DEPS=(

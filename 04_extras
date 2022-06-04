@@ -11,6 +11,7 @@ AURPKGS=(
   'onedrive-abraunegg'
   'slack-desktop'
   'zoom'
+  'protonvpn'
 )
 
 for PKG in "${PKGS[@]}"; do
