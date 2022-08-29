@@ -3,15 +3,17 @@
 echo -e "\nInstalling extras\n"
 
 PKGS=(
+  'bitwarden'
   'keepassxc'
   'discord'
 )
 
 AURPKGS=(
-  'onedrive-abraunegg'
   'slack-desktop'
   'zoom'
   'protonvpn'
+  'megasync'
+  'dolphin-megasync'
 )
 
 for PKG in "${PKGS[@]}"; do

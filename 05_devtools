@@ -9,7 +9,7 @@ PKGS=(
 )
 
 AURPKGS=(
-  'vscodium-bin'
+  'visual-studio-code-bin'
   'insomnia'
 )
 
