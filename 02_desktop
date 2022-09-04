@@ -50,7 +50,7 @@ PKGS=(
   'vivaldi-ffmpeg-codecs'
 
   # office suite
-  'libreoffice-fresh'
+  'libreoffice-still'
   'hunspell-en_US'
   'hunspell-es_pe'
   'hyphen-en'
