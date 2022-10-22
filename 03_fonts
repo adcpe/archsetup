@@ -27,10 +27,10 @@ PKGS=(
   'ttf-ibm-plex'
   'ttf-liberation'
   'ttf-iosevka-nerd'
+  'ttf-terminus-nerd'
 )
 
 AURPKGS=(
-  'nerd-fonts-terminus'
   'nerd-fonts-victor-mono'
   'nerd-fonts-dejavu-complete'
   'ttf-ms-fonts'
