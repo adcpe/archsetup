@@ -4,7 +4,6 @@ echo -e "\nInstalling extras\n"
 
 PKGS=(
   'bitwarden'
-  'keepassxc'
   'discord'
 )
 
