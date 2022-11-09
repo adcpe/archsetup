@@ -9,8 +9,9 @@ PKGS=(
 )
 
 AURPKGS=(
-  'visual-studio-code-bin'
-  'insomnia'
+  'vscodium-bin'
+  'vscodium-bin-marketplace'
+  'insomnia-bin'
 )
 
 DEPS=(
