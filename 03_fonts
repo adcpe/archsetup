@@ -31,7 +31,7 @@ PKGS=(
 )
 
 AURPKGS=(
-  'nerd-fonts-victor-mono'
+  'ttf-nerd-fonts-victor-mono'
   'nerd-fonts-dejavu-complete'
   'ttf-ms-fonts'
 )
