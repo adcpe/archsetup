@@ -1,41 +1,38 @@
-#!/usr/bin/env bash
-
+#!/usr/bin/env fish
 echo -e "\nInstalling fonts\n"
 
-PKGS=(
-  # fonts
-  'noto-fonts-emoji'
-  'otf-fira-mono'
-  'ttf-anonymous-pro'
-  'ttf-fantasque-sans-mono'
-  'ttf-fira-code'
-  'ttf-fira-mono'
-  'ttf-inconsolata'
-  'ttf-linux-libertine'
-  'ttf-roboto'
-  'ttf-ubuntu-font-family'
-  'xorg-fonts'
+set -l fonts noto-fonts-emoji
+set -a fonts otf-fira-mono
+set -a fonts ttf-anonymous-pro
+set -a fonts ttf-fantasque-sans-mono
+set -a fonts ttf-fira-code
+set -a fonts ttf-fira-mono
+set -a fonts ttf-inconsolata
+set -a fonts ttf-linux-libertine
+set -a fonts ttf-roboto
+set -a fonts ttf-ubuntu-font-family
+set -a fonts xorg-fonts
 
-  # ttf-fonts
-  'gnu-free-fonts'
-  'noto-fonts'
-  'ttf-bitstream-vera'
-  'ttf-croscore'
-  'ttf-dejavu'
-  'ttf-droid'
-  'ttf-font-awesome'
-  'ttf-ibm-plex'
-  'ttf-liberation'
-  'ttf-iosevka-nerd'
-  'ttf-terminus-nerd'
+set -a fonts gnu-free-fonts
+set -a fonts noto-fonts
+set -a fonts ttf-bitstream-vera
+set -a fonts ttf-croscore
+set -a fonts ttf-dejavu
+set -a fonts ttf-droid
+set -a fonts ttf-font-awesome
+set -a fonts ttf-ibm-plex
+set -a fonts ttf-liberation
+set -a fonts ttf-iosevka-nerd
+set -a fonts ttf-terminus-nerd
 
-  'ttf-nerd-fonts-victor-mono'
-  'nerd-fonts-dejavu-complete'
-  'ttf-ms-fonts'
-)
+set -a fonts ttf-nerd-fonts-victor-mono
+set -a fonts nerd-fonts-dejavu-complete
+set -a fonts ttf-ms-fonts
 
-for PKG in "${PKGS[@]}"; do
-  yay -S "$PKG" --noconfirm --needed
-done
+for font in $fonts
+    yay -S $font --noconfirm --needed
+end
 
-echo -e "\nDONE!\n"
+set -e fonts
+
+echo -e "\nFinished!\n"

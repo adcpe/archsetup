@@ -1,76 +1,74 @@
-#!/usr/bin/env bash
-
+#!/usr/bin/env fish
 echo -e "\nInstalling Desktop Environment\n"
 
-PKGS=(
-  'plasma'                  # minimal desktop environment
+set -l packages plasma # minimal desktop environment
 
-  # Desktop environment base programs
-  'dolphin'                 # file explorer
-  'ark'                     # (de)compression tool
-  'gwenview'                # image viewer
-  'kate'                    # text editor
-  'okular'                  # document viewer
-  'kcalc'                   # calculator
-  'spectacle'               # screenshots
-  'kcolorchooser'           # color chooser
-  'qbittorrent'             # torrents
-  'redshift'                # screen color temperature adjuster
-  'vlc'                     # video player
-  'cantata'                 # music player
-  'starship'                # command prompt customization
-  'kcron'
-  'khelpcenter'
-  'ksystemlog'
-  'ktimer'
-  'kfind'
-  'kdialog'
-  'openvpn'
-  'networkmanager-openvpn'
-  'kwallet-pam'
-  'kwalletmanager'
-  'gnome-keyring'
-  'libsecret'
+# Desktop environment base programs
+set -a packages dolphin # file explorer
+set -a packages ark # (de)compression tool
+set -a packages gwenview # image viewer
+set -a packages kate # text editor
+set -a packages okular # document viewer
+set -a packages kcalc # calculator
+set -a packages spectacle # screenshots
+set -a packages kcolorchooser # color chooser
+set -a packages qbittorrent # torrents
+set -a packages redshift # screen color temperature adjuster
+set -a packages vlc # video player
+set -a packages cantata # music player
+set -a packages starship # command prompt customization
+set -a packages kcron
+set -a packages khelpcenter
+set -a packages ksystemlog
+set -a packages ktimer
+set -a packages kfind
+set -a packages kdialog
+set -a packages openvpn
+set -a packages networkmanager-openvpn
+set -a packages kwallet-pam
+set -a packages kwalletmanager
+set -a packages gnome-keyring
+set -a packages libsecret
 
-  # bluetooth & audio
-  'bluez'
-  'bluez-utils'
-  'pipewire'
-  'pipewire-alsa'
-  'pipewire-pulse'
-  'pipewire-jack'
-  'wireplumber'
-  'plasma-pa'
-  'sof-firmware'
-  'alsa-ucm-conf'
+# bluetooth & audio
+set -a packages bluez
+set -a packages bluez-utils
+set -a packages pipewire
+set -a packages pipewire-alsa
+set -a packages pipewire-pulse
+set -a packages pipewire-jack
+set -a packages wireplumber
+set -a packages plasma-pa
+set -a packages sof-firmware
+set -a packages alsa-ucm-conf
 
-  # browsers
-  'firefox'
-  'chromium'
+# browsers
+set -a packages firefox
+set -a packages chromium
 
-  # office suite
-  'libreoffice-still'
-  'hunspell-en_US'
-  'hunspell-es_pe'
-  'hyphen-en'
-  'hyphen-es'
-)
+# office suite
+set -a packages libreoffice-still
+set -a packages hunspell-en_US
+set -a packages hunspell-es_pe
+set -a packages hyphen-en
+set -a packages hyphen-es
 
-DEPS=(
-  'mpd'                     # music player daemon
-  'fwupd'
-  'packagekit-qt5'
-)
+set -l deps mpd # music player daemon
+set -a deps fwupd
+set -a deps packagekit-qt5
 
-for PKG in "${PKGS[@]}"; do
-  yay -S "$PKG" --noconfirm --needed
-done
+for package in $packages
+    yay -S $package --noconfirm --needed
+end
 
-for DEP in "${DEPS[@]}"; do
-  yay -S "$DEP" --noconfirm --needed --asdeps
-done
+for dep in $deps
+    yay -S $dep --noconfirm --needed
+end
+
+set -e packages
+set -e deps
 
 sudo systemctl enable sddm.service
 sudo systemctl enable bluetooth.service
 
-echo -e "\nDONE!\n"
+echo -e "\nFinished!\n"

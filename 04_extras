@@ -1,20 +1,18 @@
-#!/usr/bin/env bash
-
+#!/usr/bin/env fish
 echo -e "\nInstalling extras\n"
 
-PKGS=(
-  'bitwarden'
-  'discord'
+set -l packages bitwarden
+set -a packages discord
+set -a packages slack-desktop
+set -a packages zoom
+set -a packages protonvpn-cli
+set -a packages megasync
+set -a packages dolphin-megasync
 
-  'slack-desktop'
-  'zoom'
-  'protonvpn-cli'
-  'megasync'
-  'dolphin-megasync'
-)
+for package in $packages
+    yay -S $package --noconfirm --needed
+end
 
-for PKG in "${PKGS[@]}"; do
-  yay -S "$PKG" --noconfirm --needed
-done
+set -e packages
 
-echo -e "\nDONE!\n"
+echo -e "\nFinished!\n"

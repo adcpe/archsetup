@@ -1,28 +1,25 @@
-#!/usr/bin/env bash
-
+#!/usr/bin/env fish
 echo -e "\nInstalling devtools\n"
 
-PKGS=(
-  'postgresql'
-  'mariadb'
-  'dbeaver'
+set -l packages postgresql
+set -a packages mariadb
+set -a packages dbeaver
+set -a packages vscodium-bin
+set -a packages vscodium-bin-marketplace
+set -a packages vscodium-bin-features
+set -a packages insomnia-bin
 
-  'vscodium-bin'
-  'vscodium-bin-marketplace'
-  'vscodium-bin-features'
-  'insomnia-bin'
-)
+set -l deps dbeaver-plugin-office
 
-DEPS=(
-  'dbeaver-plugin-office'
-)
+for package in $packages
+    yay -S $package --noconfirm --needed
+end
 
-for PKG in "${PKGS[@]}"; do
-  yay -S "$PKG" --noconfirm --needed
-done
+for dep in $deps
+    yay -S $dep --noconfirm --needed
+end
 
-for DEP in "${DEPS[@]}"; do
-  yay -S "$DEP" --noconfirm --needed --asdeps
-done
+set -e packages
+set -e deps
 
-echo -e "\nDONE!\n"
+echo -e "\nFinished!\n"

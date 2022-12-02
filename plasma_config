@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-
+#!/usr/bin/env fish
+echo -e "\nSetting KDE options...\n"
 # titlebar buttons
 kwriteconfig5 --file $HOME/.config/kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft "MF"
 kwriteconfig5 --file $HOME/.config/kwinrc --group org.kde.kdecoration2 --key ButtonsOnRight "IAX"
@@ -55,3 +55,5 @@ kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ShowSingle "false
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key SwitchMode "Global"
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key Use "true"
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key VariantList "deadtilde,altgr-intl"
+
+echo -e "\nFinished!\n"
