@@ -47,8 +47,6 @@ PKGS=(
   # browsers
   'firefox'
   'chromium'
-  'vivaldi'
-  'vivaldi-ffmpeg-codecs'
 
   # office suite
   'libreoffice-still'
@@ -56,10 +54,6 @@ PKGS=(
   'hunspell-es_pe'
   'hyphen-en'
   'hyphen-es'
-
-  # other
-  'libappindicator-gtk3'
-  'gnome-shell-extension-appindicator'
 )
 
 DEPS=(
@@ -69,11 +63,11 @@ DEPS=(
 )
 
 for PKG in "${PKGS[@]}"; do
-  sudo pacman -S "$PKG" --noconfirm --needed
+  yay -S "$PKG" --noconfirm --needed
 done
 
 for DEP in "${DEPS[@]}"; do
-  sudo pacman -S "$DEP" --noconfirm --needed --asdeps
+  yay -S "$DEP" --noconfirm --needed --asdeps
 done
 
 sudo systemctl enable sddm.service

@@ -6,9 +6,7 @@ PKGS=(
   'postgresql'
   'mariadb'
   'dbeaver'
-)
 
-AURPKGS=(
   'vscodium-bin'
   'vscodium-bin-marketplace'
   'vscodium-bin-features'
@@ -20,15 +18,11 @@ DEPS=(
 )
 
 for PKG in "${PKGS[@]}"; do
-  sudo pacman -S "$PKG" --noconfirm --needed
-done
-
-for AURPKG in "${AURPKGS[@]}"; do
-  yay -Sua "$AURPKG" --noconfirm --needed
+  yay -S "$PKG" --noconfirm --needed
 done
 
 for DEP in "${DEPS[@]}"; do
-  yay -Sua "$DEP" --noconfirm --needed --asdeps
+  yay -S "$DEP" --noconfirm --needed --asdeps
 done
 
 echo -e "\nDONE!\n"

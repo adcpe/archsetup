@@ -28,20 +28,14 @@ PKGS=(
   'ttf-liberation'
   'ttf-iosevka-nerd'
   'ttf-terminus-nerd'
-)
 
-AURPKGS=(
   'ttf-nerd-fonts-victor-mono'
   'nerd-fonts-dejavu-complete'
   'ttf-ms-fonts'
 )
 
 for PKG in "${PKGS[@]}"; do
-  sudo pacman -S "$PKG" --noconfirm --needed
-done
-
-for AURPKG in "${AURPKGS[@]}"; do
-  yay -Sua "$AURPKG" --noconfirm --needed
+  yay -S "$PKG" --noconfirm --needed
 done
 
 echo -e "\nDONE!\n"

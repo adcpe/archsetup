@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+echo -e "\nInstalling yay\n"
+
+git clone https://aur.archlinux.org/yay.git ~/yay
+cd ~/yay
+makepkg -si
+
 echo -e "\nInstalling Essential Tools\n"
 
 PKGS=(
@@ -19,9 +25,7 @@ PKGS=(
   'exfat-utils'
   'ntfs-3g'
   'gparted'
-)
 
-TOOLS=(
   # archiving tools
   'lrzip'
   'lrzop'
@@ -53,21 +57,14 @@ TOOLS=(
   'openjpeg2'
   'pango'
   'libxslt'
+
+  'ttf-font'
 )
 
 for PKG in "${PKGS[@]}"; do
-  sudo pacman -S "$PKG" --noconfirm --needed
+  yay -S "$PKG" --noconfirm --needed
 done
 
-for TOOL in "${TOOLS[@]}"; do
-  sudo pacman -S "$TOOL" --noconfirm --needed --asdeps
-done
-
-git clone https://aur.archlinux.org/yay.git ~/yay
-cd ~/yay
-makepkg -si
-
-sudo pacman -S ttf-font
 xdg-user-dirs-update
 
 curl -Lk https://gitlab.com/andres-dc/dots/-/raw/main/.restore | /bin/bash
