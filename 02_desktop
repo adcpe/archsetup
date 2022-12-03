@@ -14,6 +14,7 @@ set -a packages spectacle # screenshots
 set -a packages kcolorchooser # color chooser
 set -a packages qbittorrent # torrents
 set -a packages redshift # screen color temperature adjuster
+set -a packages plasma5-applets-redshift-control-git # plasma applet for redshift
 set -a packages vlc # video player
 set -a packages cantata # music player
 set -a packages starship # command prompt customization
