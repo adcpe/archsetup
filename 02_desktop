@@ -6,19 +6,20 @@ PKGS=(
   'plasma'                  # minimal desktop environment
 
   # Desktop environment base programs
-  'dolphin'                 # file explorer
-  'ark'                     # (de)compression tool
-  'gwenview'                # image viewer
-  'kate'                    # text editor
-  'okular'                  # document viewer
-  'kcalc'                   # calculator
-  'spectacle'               # screenshots
-  'kcolorchooser'           # color chooser
-  'qbittorrent'             # torrents
-  'redshift'                # screen color temperature adjuster
-  'vlc'                     # video player
-  'cantata'                 # music player
-  'starship'                # command prompt customization
+  'dolphin'                                 # file explorer
+  'ark'                                     # (de)compression tool
+  'gwenview'                                # image viewer
+  'kate'                                    # text editor
+  'okular'                                  # document viewer
+  'kcalc'                                   # calculator
+  'spectacle'                               # screenshots
+  'kcolorchooser'                           # color chooser
+  'qbittorrent'                             # torrents
+  'redshift'                                # screen color temperature adjuster
+  'plasma5-applets-redshift-control-git'    # plasma applet
+  'vlc'                                     # video player
+  'cantata'                                 # music player
+  'starship'                                # command prompt customization
   'kcron'
   'khelpcenter'
   'ksystemlog'
