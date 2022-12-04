@@ -22,12 +22,9 @@ set -a fonts ttf-droid
 set -a fonts ttf-font-awesome
 set -a fonts ttf-ibm-plex
 set -a fonts ttf-liberation
-set -a fonts ttf-iosevka-nerd
-set -a fonts ttf-terminus-nerd
 
-set -a fonts ttf-nerd-fonts-victor-mono
-set -a fonts nerd-fonts-dejavu-complete
 set -a fonts ttf-ms-fonts
+set -a fonts nerd-fonts-complete
 
 for font in $fonts
     yay -S $font --noconfirm --needed
