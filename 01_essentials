@@ -15,6 +15,7 @@ set -a packages bat-extras # utilities for bat
 set -a packages htop # task manager
 set -a packages neofetch # system info
 set -a packages openssh # ssh
+set -a packages fisher # fish plugins
 set -a packages curl
 set -a packages xclip
 set -a packages xdg-user-dirs
@@ -68,5 +69,8 @@ set -e packages
 xdg-user-dirs-update
 
 curl -Lk https://gitlab.com/andres-dc/dots/-/raw/main/.restore | /bin/bash
+
+# install fisher plugins from ~/,config/fish/fish_plugins
+fisher update
 
 echo -e "\nFinished!\n"
