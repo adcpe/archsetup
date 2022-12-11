@@ -60,7 +60,7 @@ set -a packages pango
 set -a packages libxslt
 set -a packages ttf-font
 
-for package in $packages
+for package in $packages do
     yay -S $package --noconfirm --needed
 end
 
@@ -68,7 +68,8 @@ set -e packages
 
 xdg-user-dirs-update
 
-curl -Lk https://gitlab.com/andres-dc/dots/-/raw/main/.restore | /bin/bash
+# script to clone dotfiles repo into ~
+curl https://gitlab.com/adcpe/dots/-/raw/main/.config/restore-dots.fish -o $HOME/.config/restore-dots.fish && $HOME/.config/restore-dots.fish
 
 # install fisher plugins from ~/.config/fish/fish_plugins
 fisher update
