@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-
+#!/usr/bin/env fish
 echo -e "\nInstalling yay\n"
 
 git clone https://aur.archlinux.org/yay.git ~/yay
@@ -8,65 +7,70 @@ makepkg -si
 
 echo -e "\nInstalling Essential Tools\n"
 
-PKGS=(
-  'kitty'                   # terminal
-  'exa'                     # ls
-  'bat'                     # cat
-  'htop'                    # task manager
-  'neofetch'                # system info
-  'openssh'                 # ssh
-  'curl'
-  'xclip'
-  'xdg-user-dirs'
-  'base-devel'
-  'reflector'
+set -l packages man-db # manpages
+set -a packages kitty # terminal
+set -a packages exa # ls
+set -a packages bat # cat
+set -a packages bat-extras # utilities for bat
+set -a packages htop # task manager
+set -a packages neofetch # system info
+set -a packages openssh # ssh
+set -a packages fisher # fish plugins
+set -a packages curl
+set -a packages xclip
+set -a packages xdg-user-dirs
+set -a packages base-devel
+set -a packages reflector
 
-  # file system and partition tools
-  'exfat-utils'
-  'ntfs-3g'
-  'gparted'
+# file system and partition tools
+set -a packages exfat-utils
+set -a packages ntfs-3g
+set -a packages gparted
 
-  # archiving tools
-  'lrzip'
-  'lrzop'
-  'p7zip'
-  'unarchiver'
-  'unrar'
-  'unzip'
-  
-  # php requirements
-  'icu'
-  'postgresql-libs'
-  'zlib'
-  'oniguruma'
-  're2c'
-  'gd'
-  'libzip'
-  'imagemagick'
-  'djvulibre'
-  'ghostscript'
-  'imagemagick-doc'
-  'libheif'
-  'libraw'
-  'librsvg'
-  'libwebp'
-  'libwmf'
-  'libxml2'
-  'ocl-icd'
-  'openexr'
-  'openjpeg2'
-  'pango'
-  'libxslt'
+# archiving tools
+set -a packages lrzip
+set -a packages lrzop
+set -a packages p7zip
+set -a packages unarchiver
+set -a packages unrar
+set -a packages unzip
 
-  'ttf-font'
-)
+# php requirements
+set -a packages icu
+set -a packages postgresql-libs
+set -a packages zlib
+set -a packages oniguruma
+set -a packages re2c
+set -a packages gd
+set -a packages libzip
+set -a packages imagemagick
+set -a packages djvulibre
+set -a packages ghostscript
+set -a packages imagemagick-doc
+set -a packages libheif
+set -a packages libraw
+set -a packages librsvg
+set -a packages libwebp
+set -a packages libwmf
+set -a packages libxml2
+set -a packages ocl-icd
+set -a packages openexr
+set -a packages openjpeg2
+set -a packages pango
+set -a packages libxslt
+set -a packages ttf-font
 
-for PKG in "${PKGS[@]}"; do
-  yay -S "$PKG" --noconfirm --needed
-done
+for package in $packages
+    yay -S $package --noconfirm --needed
+end
+
+set -e packages
 
 xdg-user-dirs-update
 
 curl -Lk https://gitlab.com/andres-dc/dots/-/raw/main/.restore | /bin/bash
 
-echo -e "\nDONE!\n"
+# install fisher plugins from ~/.config/fish/fish_plugins
+fisher update
+
+echo -e "\nFinished!\n"

@@ -1,0 +1,35 @@
+#!/usr/bin/env fish
+echo -e "\nInstalling fonts\n"
+
+set -l fonts noto-fonts-emoji
+set -a fonts otf-fira-mono
+set -a fonts ttf-anonymous-pro
+set -a fonts ttf-fantasque-sans-mono
+set -a fonts ttf-fira-code
+set -a fonts ttf-fira-mono
+set -a fonts ttf-inconsolata
+set -a fonts ttf-linux-libertine
+set -a fonts ttf-roboto
+set -a fonts ttf-ubuntu-font-family
+set -a fonts xorg-fonts
+
+set -a fonts gnu-free-fonts
+set -a fonts noto-fonts
+set -a fonts ttf-bitstream-vera
+set -a fonts ttf-croscore
+set -a fonts ttf-dejavu
+set -a fonts ttf-droid
+set -a fonts ttf-font-awesome
+set -a fonts ttf-ibm-plex
+set -a fonts ttf-liberation
+
+set -a fonts ttf-ms-fonts
+set -a fonts nerd-fonts-complete
+
+for font in $fonts
+    yay -S $font --noconfirm --needed
+end
+
+set -e fonts
+
+echo -e "\nFinished!\n"

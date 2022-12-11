@@ -1,0 +1,25 @@
+#!/usr/bin/env fish
+echo -e "\nInstalling devtools\n"
+
+set -l packages postgresql
+set -a packages mariadb
+set -a packages dbeaver
+set -a packages vscodium-bin
+set -a packages vscodium-bin-marketplace
+set -a packages vscodium-bin-features
+set -a packages insomnia-bin
+
+set -l deps dbeaver-plugin-office
+
+for package in $packages
+    yay -S $package --noconfirm --needed
+end
+
+for dep in $deps
+    yay -S $dep --noconfirm --needed
+end
+
+set -e packages
+set -e deps
+
+echo -e "\nFinished!\n"

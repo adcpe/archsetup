@@ -1,0 +1,18 @@
+#!/usr/bin/env fish
+echo -e "\nInstalling extras\n"
+
+set -l packages bitwarden
+set -a packages discord
+set -a packages slack-desktop
+set -a packages zoom
+set -a packages protonvpn-cli
+set -a packages megasync
+set -a packages dolphin-megasync
+
+for package in $packages
+    yay -S $package --noconfirm --needed
+end
+
+set -e packages
+
+echo -e "\nFinished!\n"
