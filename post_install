@@ -1,0 +1,11 @@
+#!/usr/bin/env fish
+
+xdg-user-dirs-update
+fisher update
+
+sudo systemctl enable sddm.service
+sudo systemctl enable bluetooth.service
+
+while read -a line
+    eval yay -S --noconfirm --needed --asdeps $line
+end <$PWD/dependencies
