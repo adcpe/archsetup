@@ -1,30 +1,30 @@
 #!/usr/bin/env fish
 echo -e "\nSetting KDE options...\n"
 # titlebar buttons
-kwriteconfig5 --file $HOME/.config/kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft "MF"
-kwriteconfig5 --file $HOME/.config/kwinrc --group org.kde.kdecoration2 --key ButtonsOnRight "IAX"
-kwriteconfig5 --file $HOME/.config/kwinrc --group org.kde.kdecoration2 --key CloseOnDoubleClickOnMenu "false"
-kwriteconfig5 --file $HOME/.config/kwinrc --group org.kde.kdecoration2 --key ShowToolTips "false"
+kwriteconfig5 --file $HOME/.config/kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft MF
+kwriteconfig5 --file $HOME/.config/kwinrc --group org.kde.kdecoration2 --key ButtonsOnRight IAX
+kwriteconfig5 --file $HOME/.config/kwinrc --group org.kde.kdecoration2 --key CloseOnDoubleClickOnMenu false
+kwriteconfig5 --file $HOME/.config/kwinrc --group org.kde.kdecoration2 --key ShowToolTips false
 
 # disable borders
-kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key Bottom "None"
-kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key BottomLeft "None"
-kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key BottomRight "None"
-kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key Left "None"
-kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key Right "None"
-kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key Top "None"
-kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key TopLeft "None"
-kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key TopRight "None"
+kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key Bottom None
+kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key BottomLeft None
+kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key BottomRight None
+kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key Left None
+kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key Right None
+kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key Top None
+kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key TopLeft None
+kwriteconfig5 --file $HOME/.config/kwinrc --group ElectricBorders --key TopRight None
 
 # alt + tab
-kwriteconfig5 --file $HOME/.config/kwinrc --group TabBox --key LayoutName "big_icons"
-kwriteconfig5 --file $HOME/.config/kwinrc --group Plugins --key highlightwindowEnabled "true"
+kwriteconfig5 --file $HOME/.config/kwinrc --group TabBox --key LayoutName big_icons
+kwriteconfig5 --file $HOME/.config/kwinrc --group Plugins --key highlightwindowEnabled true
 
 # do not restore desktop session
-kwriteconfig5 --file $HOME/.config/ksmserverrc --group General --key loginMode "default"
+kwriteconfig5 --file $HOME/.config/ksmserverrc --group General --key loginMode default
 
 # touchpad
-kwriteconfig5 --file $HOME/.config/touchpadxlibinputrc --group "SynPS/2 Synaptics TouchPad" --key tapToClick "true"
+kwriteconfig5 --file $HOME/.config/touchpadxlibinputrc --group "SynPS/2 Synaptics TouchPad" --key tapToClick true
 
 # locales
 kwriteconfig5 --file $HOME/.config/plasma-localerc --group Formats --key LANG "en_US.UTF-8"
@@ -33,27 +33,27 @@ kwriteconfig5 --file $HOME/.config/plasma-localerc --group Formats --key LC_MEAS
 kwriteconfig5 --file $HOME/.config/plasma-localerc --group Formats --key LC_MONETARY "es_PE.UTF-8"
 kwriteconfig5 --file $HOME/.config/plasma-localerc --group Formats --key LC_NUMERIC "es_PE.UTF-8"
 kwriteconfig5 --file $HOME/.config/plasma-localerc --group Formats --key LC_TIME "es_PE.UTF-8"
-kwriteconfig5 --file $HOME/.config/plasma-localerc --group Formats --key useDetailed "true"
+kwriteconfig5 --file $HOME/.config/plasma-localerc --group Formats --key useDetailed true
 
 # set default applications
 kwriteconfig5 --file $HOME/.config/kdeglobals --group General --key BrowserApplication "firefox.desktop"
-kwriteconfig5 --file $HOME/.config/kdeglobals --group General --key TerminalApplication "kitty"
+kwriteconfig5 --file $HOME/.config/kdeglobals --group General --key TerminalApplication kitty
 kwriteconfig5 --file $HOME/.config/kdeglobals --group General --key TerminalService "kitty.desktop"
 
 # open files and folder with double click
-kwriteconfig5 --file $HOME/.config/kdeglobals --group KDE --key SingleClick "false"
+kwriteconfig5 --file $HOME/.config/kdeglobals --group KDE --key SingleClick false
 
 # set keyboard layout
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key DisplayNames ""
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key LayoutList "es,us"
-kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key Model "pc86"
-kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ResetOldOptions "false"
-kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ShowFlag "false"
-kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ShowLabel "true"
-kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ShowLayoutIndicator "true"
-kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ShowSingle "false"
-kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key SwitchMode "Global"
-kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key Use "true"
+kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key Model pc86
+kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ResetOldOptions false
+kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ShowFlag false
+kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ShowLabel true
+kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ShowLayoutIndicator true
+kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key ShowSingle false
+kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key SwitchMode Global
+kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key Use true
 kwriteconfig5 --file $HOME/.config/kxkbrc --group Layout --key VariantList "deadtilde,altgr-intl"
 
 echo -e "\nFinished!\n"

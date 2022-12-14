@@ -40,7 +40,8 @@ sof-firmware
 alsa-ucm-conf
 
 # browsers
-firefox
+librewolf-bin
+librewolf-extension-plasma-integration
 chromium
 
 # office suite
