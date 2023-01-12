@@ -57,8 +57,8 @@
       "libsecret",
       "fwupd",
       "packagekit-qt5",
-      "firefox",
       "chromium",
+      "firefox",
       "bluez",
       "bluez-utils",
       "pipewire",
@@ -120,7 +120,11 @@
       "ttf-ibm-plex",
       "ttf-liberation",
       "ttf-ms-fonts",
-      "nerd-fonts-complete-starship"
+      "ttf-hack",
+      "ttf-inconsolata",
+      "ttf-iosevka",
+      "ttf-fira-code",
+      "ttf-fira-mono"
     ]
   },
   "06_dev_libs": {
