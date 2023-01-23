@@ -3,6 +3,15 @@ echo -e "\nSetting KDE options...\n"
 
 set fish_trace 1
 
+mkdir ~/Desktop
+mkdir ~/Downloads
+mkdir ~/Templates
+mkdir ~/Public
+mkdir ~/Documents
+mkdir ~/Music
+mkdir ~/Pictures
+mkdir ~/Videos
+
 # titlebar buttons
 kwriteconfig5 --file ~/.config/kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft MF
 kwriteconfig5 --file ~/.config/kwinrc --group org.kde.kdecoration2 --key ButtonsOnRight IAX
