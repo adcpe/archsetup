@@ -1,17 +1,16 @@
 import subprocess
 
-y_refresh = ['yay', '-Syu']
-y_install = ['yay', '-S']
+yay_install = ['yay', '-S']
 
-p_refresh = ['sudo', 'pacman', '-Syu']
-p_install = ['sudo', 'pacman', '-S', '--needed']
-subprocess.call(p_refresh)
+pacman_refresh = ['sudo', 'pacman', '-Syu']
+pacman_install = ['sudo', 'pacman', '-S', '--needed']
+subprocess.call(pacman_refresh)
 
 security = [
     'apparmor',
     'ufw',
 ]
-subprocess.call(p_install + security)
+subprocess.call(pacman_install + security)
 
 sound = [
     'alsa-ucm-conf',
@@ -21,7 +20,7 @@ sound = [
     'pipewire-pulse',
     'wireplumber',
 ]
-subprocess.call(p_install + sound)
+subprocess.call(pacman_install + sound)
 
 dev_libs = [
     'djvulibre',
@@ -29,7 +28,6 @@ dev_libs = [
     'ghostscript',
     'icu',
     'imagemagick',
-    'imagemagick-doc',
     'libheif',
     'libraw',
     'librsvg',
@@ -47,7 +45,7 @@ dev_libs = [
     're2c',
     'zlib',
 ]
-subprocess.call(p_install + dev_libs)
+subprocess.call(pacman_install + dev_libs)
 
 compression = [
     'arj',
@@ -57,16 +55,16 @@ compression = [
     'unarchiver',
     'unrar'
 ]
-subprocess.call(p_install + compression)
+subprocess.call(pacman_install + compression)
 
 filesystems = [
     'exfat-utils',
     'ntfs-3g',
     'partitionmanager'
 ]
-subprocess.call(p_install + filesystems)
+subprocess.call(pacman_install + filesystems)
 
-group_1 = [
+base_tools = [
     'base-devel',
     'bat',
     'bat-extras',
@@ -78,11 +76,12 @@ group_1 = [
     'reflector',
     'xclip',
     'xdg-user-dirs',
+    'xdg-desktop-portal',
     'xdg-desktop-portal-kde',
 ]
-subprocess.call(p_install + group_1)
+subprocess.call(pacman_install + base_tools)
 
-group_2 = [
+desktop_environment = [
     'alsa-ucm-conf',
     'ark',
     'bluez',
@@ -122,23 +121,23 @@ group_2 = [
     'starship',
     'vlc',
 ]
-subprocess.call(p_install + group_2)
+subprocess.call(pacman_install + desktop_environment)
 
-dev = [
+dev_tools = [
     'dbeaver',
     'dbeaver-plugin-office',
     'discord',
     'mariadb',
     'postgresql',
 ]
-subprocess.call(p_install + dev)
+subprocess.call(pacman_install + dev_tools)
 
 virt = [
     'libvirt',
     'qemu-full',
     'virt-manager',
 ]
-subprocess.call(p_install + virt)
+subprocess.call(pacman_install + virt)
 
 fonts = [
     'gnu-free-fonts',
@@ -159,9 +158,9 @@ fonts = [
     'ttf-roboto',
     'ttf-ubuntu-font-family',
 ]
-subprocess.call(p_install + fonts)
+subprocess.call(pacman_install + fonts)
 
-other = [
+various = [
     'bitwarden',
     'github-cli',
     'keepassxc',
@@ -171,20 +170,18 @@ other = [
     'rsync',
     'samba',
 ]
-subprocess.call(p_install + other)
+subprocess.call(pacman_install + various)
 
 aur = [
     'archlinux-artwork',
-    'dolphin-megasync-bin',
     'insomnia-bin',
-    'megasync-bin',
     'protonvpn-cli',
     'slack-desktop',
     'ttf-ms-fonts',
     'visual-studio-code-bin',
     'zoom',
 ]
-subprocess.call(y_install + aur)
+subprocess.call(yay_install + aur)
 
 post_install = [
     ['sudo', 'systemctl', 'enable', '--now', 'apparmor'],
