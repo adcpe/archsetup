@@ -40,7 +40,7 @@ kwriteconfig5 --file ~/.config/touchpadxlibinputrc --group "SynPS/2 Synaptics To
 
 # locales
 kwriteconfig5 --file ~/.config/plasma-localerc --group Formats --key useDetailed true
-kwriteconfig5 --file ~/.config/plasma-localerc --group Formats --key LANG "en_US.UTF-8"
+kwriteconfig5 --file ~/.config/plasma-localerc --group Formats --key LANG "en_GB.UTF-8"
 kwriteconfig5 --file ~/.config/plasma-localerc --group Formats --key LC_COLLATE "es_PE.UTF-8"
 kwriteconfig5 --file ~/.config/plasma-localerc --group Formats --key LC_MEASUREMENT "es_PE.UTF-8"
 kwriteconfig5 --file ~/.config/plasma-localerc --group Formats --key LC_MONETARY "es_PE.UTF-8"
@@ -74,7 +74,7 @@ kwriteconfig5 --file ~/.config/klipperrc --group General --key KeepClipboardCont
 # night color
 kwriteconfig5 --file ~/.config/kwinrc --group NightColor --key Active true
 kwriteconfig5 --file ~/.config/kwinrc --group NightColor --key DayTemperature 6000
-kwriteconfig5 --file ~/.config/kwinrc --group NightColor --key EveningBeginFixed 1830
+kwriteconfig5 --file ~/.config/kwinrc --group NightColor --key EveningBeginFixed 1800
 kwriteconfig5 --file ~/.config/kwinrc --group NightColor --key Mode Times
 kwriteconfig5 --file ~/.config/kwinrc --group NightColor --key MorningBeginFixed 0800
 kwriteconfig5 --file ~/.config/kwinrc --group NightColor --key NightTemperature 3900
