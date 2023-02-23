@@ -43,6 +43,7 @@ dev_libs = [
     'pango',
     'postgresql-libs',
     're2c',
+    'tk',
     'zlib',
 ]
 subprocess.call(pacman_install + dev_libs)
