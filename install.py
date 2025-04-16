@@ -1,16 +1,52 @@
+import os
+import shutil
 import subprocess
 
-yay_install = ['yay', '-S']
+# reusable function
+import subprocess
 
-pacman_refresh = ['sudo', 'pacman', '-Syu']
-pacman_install = ['sudo', 'pacman', '-S', '--needed']
-subprocess.call(pacman_refresh)
+def run_command(command, cwd=None):
+    # print(command)
+    process = subprocess.Popen(
+        command,
+        shell=True,
+        cwd=cwd,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True
+    )
+
+    for line in process.stdout: # type: ignore
+        print(line, end='')  # print live output
+
+    process.wait()
+    if process.returncode != 0:
+        print(f'\nCommand failed: {command}')
+        exit(1)
+    print('')
+
+
+
+# check if ~/yay exists, delete it and then install yay
+yay_dir = os.path.expanduser('~') + '/yay'
+
+if os.path.exists(yay_dir) and os.path.isdir(yay_dir):
+    shutil.rmtree(yay_dir)
+
+run_command('git clone https://aur.archlinux.org/yay-bin.git ' + yay_dir)
+run_command('makepkg -si --noconfirm', cwd=yay_dir)
+
+run_command('yay -Syyu --combinedupgrade --save') # enable colored output & update all packages and repos
+
+
+# start system installation
+yay_install = ['yay -S --needed']
 
 security = [
     'apparmor',
     'ufw',
 ]
-subprocess.call(pacman_install + security)
+run_command(' '.join(yay_install + security))
 
 sound = [
     'alsa-ucm-conf',
@@ -20,7 +56,7 @@ sound = [
     'pipewire-pulse',
     'wireplumber',
 ]
-subprocess.call(pacman_install + sound)
+run_command(' '.join(yay_install + sound))
 
 dev_libs = [
     'djvulibre',
@@ -46,7 +82,7 @@ dev_libs = [
     'tk',
     'zlib',
 ]
-subprocess.call(pacman_install + dev_libs)
+run_command(' '.join(yay_install + dev_libs))
 
 compression = [
     'arj',
@@ -56,14 +92,14 @@ compression = [
     'unarchiver',
     'unrar'
 ]
-subprocess.call(pacman_install + compression)
+run_command(' '.join(yay_install + compression))
 
 filesystems = [
     'exfat-utils',
     'ntfs-3g',
     'partitionmanager'
 ]
-subprocess.call(pacman_install + filesystems)
+run_command(' '.join(yay_install + filesystems))
 
 base_tools = [
     'base-devel',
@@ -80,7 +116,7 @@ base_tools = [
     'xdg-desktop-portal',
     'xdg-desktop-portal-kde',
 ]
-subprocess.call(pacman_install + base_tools)
+run_command(' '.join(yay_install + base_tools))
 
 desktop_environment = [
     'alsa-ucm-conf',
@@ -122,7 +158,7 @@ desktop_environment = [
     'starship',
     'vlc',
 ]
-subprocess.call(pacman_install + desktop_environment)
+run_command(' '.join(yay_install + desktop_environment))
 
 dev_tools = [
     'dbeaver',
@@ -131,14 +167,7 @@ dev_tools = [
     'mariadb',
     'postgresql',
 ]
-subprocess.call(pacman_install + dev_tools)
-
-virt = [
-    'libvirt',
-    'qemu-full',
-    'virt-manager',
-]
-subprocess.call(pacman_install + virt)
+run_command(' '.join(yay_install + dev_tools))
 
 fonts = [
     'gnu-free-fonts',
@@ -155,44 +184,45 @@ fonts = [
     'ttf-ibm-plex',
     'ttf-inconsolata',
     'ttf-liberation',
-    'ttf-linux-libertine',
+    'ttf-libertinus',
     'ttf-roboto',
     'ttf-ubuntu-font-family',
+    'ttf-delugia-code',
+    'ttf-victor-mono-nerd',
+    'ttf-cascadia-code',
+    'ttf-cascadia-code-nerd',
+    'ttf-cascadia-mono-nerd',
+    'ttf-mononoki-nerd',
 ]
-subprocess.call(pacman_install + fonts)
+run_command(' '.join(yay_install + fonts))
 
 various = [
-    'bitwarden',
     'github-cli',
     'keepassxc',
-    'newsboat',
     'obsidian',
     'pkgstats',
-    'rsync',
     'samba',
 ]
-subprocess.call(pacman_install + various)
+run_command(' '.join(yay_install + various))
 
 aur = [
     'archlinux-artwork',
     'insomnia-bin',
-    'protonvpn-cli',
-    'slack-desktop',
     'ttf-ms-fonts',
     'visual-studio-code-bin',
-    'zoom',
 ]
-subprocess.call(yay_install + aur)
+run_command(' '.join(yay_install + aur))
 
+
+# enable services
 post_install = [
-    ['sudo', 'systemctl', 'enable', '--now', 'apparmor'],
-    ['sudo', 'systemctl', 'enable', '--now', 'ufw'],
-    ['sudo', 'ufw', 'enable'],
-    ['sudo', 'systemctl', 'enable', 'sddm'],
-    ['sudo', 'systemctl', 'enable', 'bluetooth'],
-    ['sudo', 'usermod', '-aG', 'libvirt', 'adc'],
-    ['sudo', 'systemctl', 'start', 'pkgstats.timer'],
+    'sudo systemctl enable --now apparmor',
+    'sudo systemctl enable --now ufw',
+    'sudo ufw enable',
+    'sudo systemctl start pkgstats.timer',
+    'sudo systemctl enable --now bluetooth',
+    'sudo systemctl enable --now sddm',
 ]
 
-for cmd in post_install:
-    subprocess.call(cmd)
+for task in post_install:
+    run_command(task)
