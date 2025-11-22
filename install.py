@@ -3,8 +3,6 @@ import shutil
 import subprocess
 
 # reusable function
-import subprocess
-
 def run_command(command, cwd=None):
     # print(command)
     process = subprocess.Popen(
@@ -106,6 +104,7 @@ base_tools = [
     'bat',
     'bat-extras',
     'exa',
+    'fastfetch',
     'htop',
     'kitty',
     'man-db',
@@ -141,7 +140,6 @@ desktop_environment = [
     'kfind',
     'khelpcenter',
     'ksystemlog',
-    'ktimer',
     'kwalletmanager',
     'kwallet-pam',
     'libreoffice-still',
