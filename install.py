@@ -2,6 +2,7 @@ import os
 import shutil
 import subprocess
 
+
 # reusable function
 def run_command(command, cwd=None):
     # print(command)
@@ -14,15 +15,14 @@ def run_command(command, cwd=None):
         text=True
     )
 
-    for line in process.stdout: # type: ignore
-        print(line, end='')  # print live output
+    for line in process.stdout:  # type: ignore
+        print(line, end='')      # print live output
 
     process.wait()
     if process.returncode != 0:
         print(f'\nCommand failed: {command}')
         exit(1)
     print('')
-
 
 
 # check if ~/yay exists, delete it and then install yay
@@ -34,7 +34,8 @@ if os.path.exists(yay_dir) and os.path.isdir(yay_dir):
 run_command('git clone https://aur.archlinux.org/yay-bin.git ' + yay_dir)
 run_command('makepkg -si --noconfirm', cwd=yay_dir)
 
-run_command('yay -Syyu --combinedupgrade --save') # enable colored output & update all packages and repos
+# enable colored output & update all packages and repos
+run_command('yay -Syyu --combinedupgrade --save')
 
 
 # start system installation
@@ -88,18 +89,19 @@ compression = [
     'lzop',
     'p7zip',
     'unarchiver',
-    'unrar'
+    'unrar',
+    'unzip',
 ]
 run_command(' '.join(yay_install + compression))
 
 filesystems = [
     'exfat-utils',
     'ntfs-3g',
-    'partitionmanager'
+    'partitionmanager',
 ]
 run_command(' '.join(yay_install + filesystems))
 
-base_tools = [
+terminal_utilities = [
     'base-devel',
     'bat',
     'bat-extras',
@@ -110,12 +112,10 @@ base_tools = [
     'man-db',
     'openssh',
     'reflector',
+    'starship',
     'xclip',
-    'xdg-user-dirs',
-    'xdg-desktop-portal',
-    'xdg-desktop-portal-kde',
 ]
-run_command(' '.join(yay_install + base_tools))
+run_command(' '.join(yay_install + terminal_utilities))
 
 desktop_environment = [
     'alsa-ucm-conf',
@@ -125,6 +125,7 @@ desktop_environment = [
     'chromium',
     'dolphin',
     'firefox',
+    'foliate',
     'fwupd',
     'gnome-keyring',
     'gwenview',
@@ -153,8 +154,10 @@ desktop_environment = [
     'qbittorrent',
     'sof-firmware',
     'spectacle',
-    'starship',
     'vlc',
+    'xdg-user-dirs',
+    'xdg-desktop-portal',
+    'xdg-desktop-portal-kde',
 ]
 run_command(' '.join(yay_install + desktop_environment))
 
@@ -208,6 +211,7 @@ aur = [
     'insomnia-bin',
     'ttf-ms-fonts',
     'visual-studio-code-bin',
+    'zen-browser-bin',
 ]
 run_command(' '.join(yay_install + aur))
 
