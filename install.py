@@ -215,6 +215,19 @@ aur = [
 ]
 run_command(' '.join(yay_install + aur))
 
+theming = [
+    'plasma6-themes-qogir-git',
+    'qogir-icon-theme',
+    'qogir-gtk-theme',
+    'qogir-cursor-theme',
+    'layan-gtk-theme-git',
+    'layan-cursor-theme-git',
+    'plasma6-themes-layan-git',
+    'plasma6-themes-orchis-kde-git',
+    'orchis-theme-git',
+    'tela-circle-icon-theme-all',
+]
+run_command(' '.join(yay_install + theming))
 
 # enable services
 post_install = [
