@@ -15,8 +15,8 @@ def run_command(command, cwd=None):
         text=True
     )
 
-    for line in process.stdout:  # type: ignore
-        print(line, end='')      # print live output
+    for line in process.stdout:    # type: ignore
+        print(line, end='\n')      # print live output
 
     process.wait()
     if process.returncode != 0:
@@ -95,6 +95,7 @@ compression = [
 run_command(' '.join(yay_install + compression))
 
 filesystems = [
+    'btrfs-progs',
     'exfat-utils',
     'ntfs-3g',
     'partitionmanager',
@@ -107,6 +108,8 @@ terminal_utilities = [
     'bat-extras',
     'exa',
     'fastfetch',
+    'fish',
+    'fisher',
     'htop',
     'kitty',
     'man-db',
@@ -211,7 +214,6 @@ aur = [
     'insomnia-bin',
     'ttf-ms-fonts',
     'visual-studio-code-bin',
-    'zen-browser-bin',
 ]
 run_command(' '.join(yay_install + aur))
 
