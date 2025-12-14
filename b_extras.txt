@@ -1,0 +1,8 @@
+github-cli
+keepassxc
+
+# filesystems
+btrfs-progs
+exfat-utils
+ntfs-3g
+partitionmanager
