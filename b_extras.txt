@@ -1,8 +1,9 @@
 github-cli
-keepassxc
 
 # filesystems
 btrfs-progs
+dosfstools
+e2fsprogs
 exfat-utils
 ntfs-3g
 partitionmanager
