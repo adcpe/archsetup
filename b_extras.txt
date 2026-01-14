@@ -1,9 +1,0 @@
-github-cli
-
-# filesystems
-btrfs-progs
-dosfstools
-e2fsprogs
-exfat-utils
-ntfs-3g
-partitionmanager

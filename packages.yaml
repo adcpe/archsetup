@@ -1,0 +1,248 @@
+niri:
+  - bluez
+  - bluez-utils
+  - cava
+  - cliphist
+  - deluge-gtk
+  - dms-shell-bin
+  - gnome-calculator
+  - gnome-keyring
+  - gnome-text-editor
+  - greetd-dms-greeter-git
+  - file-roller
+  - firefox
+  - firefoxpwa
+  - flatpak
+  - fuzzel
+  - gthumb
+  - helium-browser-bin
+  - libnotify
+  - libreoffice-still
+  - mako
+  - matugen
+  - nautilus
+  - niri
+  - obsidian
+  - playerctl
+  - pkgstats
+  - power-profiles-daemon
+  - python-pywalfox
+  - quickshell-git
+  - qt5ct
+  - qt6-multimedia-ffmpeg
+  - qt6-wayland
+  - qt6ct
+  - swaybg
+  - swayidle
+  - swaylock
+  - 'wlsunset'
+  - xdg-desktop-portal-gnome
+  - xdg-desktop-portal-gtk
+  - xorg-xwayland
+  - xwayland-satellite
+
+plasma:
+  - ark
+  - bluez
+  - bluez-utils
+  - chromium
+  - dolphin
+  - firefox
+  - foliate
+  - fwupd
+  - gnome-keyring
+  - gwenview
+  - hunspell-en_US
+  - hunspell-es_pe
+  - hyphen-en
+  - hyphen-es
+  - kate
+  - kcalc
+  - kcolorchooser
+  - kcron
+  - kdialog
+  - kfind
+  - khelpcenter
+  - ksystemlog
+  - kwalletmanager
+  - kwallet-pam
+  - libreoffice-still
+  - libsecret
+  - networkmanager-openvpn
+  - obsidian
+  - okular
+  - openvpn
+  - packagekit-qt5
+  - pkgstats
+  - plasma-pa
+  - plasma
+  - reflector
+  - qbittorrent
+  - sof-firmware
+  - spectacle
+  - vlc
+  - vlc-plugins-all
+  - xdg-user-dirs
+  - xdg-desktop-portal
+  - xdg-desktop-portal-kde
+
+desktop_essentials:
+  - megasync-bin
+  - proton-vpn-gtk-app
+  - vesktop-bin
+
+terminal:
+  - base-devel
+  - bat
+  - bat-extras
+  - btop
+  - eza
+  - fastfetch
+  - fish
+  - kitty
+  - kitty-shell-integration
+  - kitty-terminfo
+  - man-db
+  - openssh
+  - reflector
+  - starship
+  - tldr
+
+filesystems:
+  - btrfs-progs
+  - dosfstools
+  - e2fsprogs
+  - exfat-utils
+  - ntfs-3g
+  - partitionmanager
+
+media:
+  - kdenlive
+  - obs-captions-plugin-bin
+  - obs-pipewire-audio-capture-bin
+  - obs-plugin-input-overlay-bin
+  - obs-studio
+  - obs-vkcapture-git
+  - tenacity
+  - vlc
+  - vlc-plugins-all
+
+sound:
+  - alsa-ucm-conf
+  - lib32-pipewire-jack
+  - pipewire
+  - pipewire-alsa
+  - pipewire-jack
+  - pipewire-pulse
+  - wireplumber
+
+theming:
+  - adw-gtk-theme
+  - archlinux-artwork
+  - layan-cursor-theme-git
+  - layan-gtk-theme-git
+  - orchis-theme-git
+  - qogir-icon-theme
+  - qogir-gtk-theme
+  - qogir-cursor-theme
+  - tela-circle-icon-theme-all
+
+fonts:
+  - gnu-free-fonts
+  - noto-fonts
+  - otf-fira-mono
+  - otf-font-awesome
+  - ttc-iosevka
+  - ttf-anonymous-pro
+  - ttf-bitstream-vera
+  - ttf-cascadia-code
+  - ttf-cascadia-code-nerd
+  - ttf-cascadia-mono-nerd
+  - ttf-croscore
+  - ttf-dejavu
+  - ttf-delugia-code
+  - ttf-droid
+  - ttf-hack
+  - ttf-ibm-plex
+  - ttf-inconsolata
+  - ttf-liberation
+  - ttf-libertinus
+  - ttf-mononoki-nerd
+  - ttf-ms-fonts
+  - ttf-roboto
+  - ttf-ubuntu-font-family
+  - ttf-victor-mono-nerd
+
+gaming:
+  - gamemode
+  - gamescope
+  - mangohud
+  - steam
+
+dev_essentials:
+  - git
+  - github-cli
+  - lazygit
+  - nano
+  - neovim
+  - vim
+  - visual-studio-code-bin
+  - vscodium-bin
+
+dev_extras:
+  - dbeaver
+  - dbeaver-plugin-office
+  - mariadb
+  - postgresql
+
+dev_libs:
+  - djvulibre
+  - gd
+  - ghostscript
+  - icu
+  - imagemagick
+  - libheif
+  - libraw
+  - librsvg
+  - libwebp
+  - libwmf
+  - libxml2
+  - libxslt
+  - libzip
+  - ocl-icd
+  - oniguruma
+  - openexr
+  - openjpeg2
+  - pango
+  - postgresql-libs
+  - re2c
+  - tk
+  - zlib
+
+security:
+  - apparmor
+  - ufw
+
+zip:
+  - arj
+  - lrzip
+  - lzop
+  - p7zip
+  - unarchiver
+  - unrar
+  - unzip
+
+qemu:
+  - dnsmasq
+  - iptables-nft
+  - qemu-desktop
+  - virt-manager
+
+# aur:
+#   - AUR-only packages here
+#   - google-chrome
+
+# flatpak:
+#   - Flatpak app IDs here
+#   - com.discordapp.Discord
+

@@ -25,7 +25,6 @@ post_install = [
     'sudo ufw enable',
     'sudo systemctl start pkgstats.timer',
     'sudo systemctl enable --now bluetooth',
-    'sudo systemctl enable --now sddm',
 ]
 
 for task in post_install:
